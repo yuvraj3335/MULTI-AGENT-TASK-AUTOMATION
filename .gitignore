@@ -1,0 +1,108 @@
+# Bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Distribution/build
+build/
+dist/
+*.egg-info/
+
+# Logs and debugging
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Python environment management
+Pipfile.lock
+poetry.lock
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+pytest_cache/
+test-results/
+
+# Docker
+*.pid
+*.tar
+docker-compose.override.yml
+
+# Jupyter (if used)
+.ipynb_checkpoints/
+
+# Migrations (optional, depending on your strategy)
+*/migrations/__pycache__/
+*/migrations/*.pyc
+
+
+# Build output
+/dist/
+/build/
+
+# Local env files
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Misc
+*.local
+*.lock-wscript
+*.tsbuildinfo
+
+# Testing
+coverage/
+
+# Optional: Mac/Linux system file
+*.swp
+
+# If using Firebase or Netlify
+.firebase/
+.netlify/
+
+# Optional: ESLint cache
+.eslintcache
+
+node_modules/

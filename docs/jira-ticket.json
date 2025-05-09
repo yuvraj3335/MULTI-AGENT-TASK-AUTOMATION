@@ -1,0 +1,8 @@
+{
+    "id": "12345",
+    "brd_id": "67890",
+    "title": "Implement Feature X",
+    "description": "Details about implementing feature X",
+    "type": "story",
+    "status": "open"
+}
