@@ -1,6 +1,6 @@
 # Multi-Agent Task Automation System
 
-A sophisticated task automation system that leverages multiple AI agents to streamline and automate complex workflows. The system combines modern web technologies with advanced AI capabilities to provide an intuitive and powerful task automation platform.
+A  task automation system that leverages multiple AI agents to streamline and automate complex workflows. The system combines modern web technologies with advanced AI capabilities to provide an intuitive and powerful task automation platform.
 
 ## 🚀 Features
 
