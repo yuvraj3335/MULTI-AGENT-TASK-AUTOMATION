@@ -16,66 +16,64 @@ A sophisticated task automation system that leverages multiple AI agents to stre
 ### Multi-Agent System Overview
 
 The system implements a sophisticated multi-agent architecture where specialized AI agents collaborate to process and transform various types of inputs into structured business outputs. Here's a detailed breakdown of the system's components and their interactions:
-
-#### Core Components
+### Core Components
 
 1. **Reasoning & Planning Agent**
-   - Acts as the central coordinator for all agent activities
-   - Manages the workflow and orchestrates agent interactions
-   - Handles error recovery and task prioritization
-   - Maintains the system's state and ensures data consistency
+   - The heart of the system, coordinating all the agents and managing their interactions.
+   - Keeps the workflow running smoothly, prioritizes tasks, and ensures everything stays on track.
+   - Handles any errors that pop up and ensures that the system’s state remains consistent.
 
 2. **Specialized Agents**
-   - **Audio-to-Text Agent**: Converts audio/video content to text using OpenAI Whisper
-   - **Key Point Extraction Agent**: Uses sentence transformers to identify and extract crucial information
-   - **Knowledge Base Agent**: Manages data persistence and retrieval operations
-   - **BRD Author Agent**: Generates Business Requirement Documents from processed information
-   - **Task Management Agent**: Handles task creation, assignment, and tracking
-   - **Quality Check Agent**: Ensures output quality and compliance
-   - **Communication Agent**: Manages notifications and inter-agent communication
-   - **Feedback Agent**: Processes and incorporates user feedback for system improvement
+   - **Audio-to-Text Agent**: Transcribes audio and video content into text using OpenAI Whisper.
+   - **Key Point Extraction Agent**: Pulls out important information from text using sentence transformers.
+   - **Knowledge Base Agent**: Takes care of storing and retrieving all data.
+   - **BRD Author Agent**: Automatically generates Business Requirement Documents from the gathered data.
+   - **Task Management Agent**: Responsible for creating, assigning, and tracking tasks throughout the process.
+   - **Quality Check Agent**: Ensures that everything produced meets the highest quality standards and compliance.
+   - **Communication Agent**: Handles all notifications and communication between agents.
+   - **Feedback Agent**: Collects user feedback and uses it to continuously improve the system.
 
 ### Workflow Process
 
 1. **Input Processing**
-   - System accepts multiple input formats (audio, video, PDF)
-   - Files are validated and stored securely
-   - Unique identifiers are assigned for tracking
+   - The system can handle different types of input, like audio, video, and PDF files.
+   - Files are checked, validated, and stored securely.
+   - Each file gets a unique ID for easy tracking.
 
 2. **Content Extraction**
-   - Audio/video files are transcribed to text
-   - PDFs are processed for text extraction
-   - Content is normalized for consistent processing
+   - Audio and video files are converted into text.
+   - PDFs are processed to pull out all the text content.
+   - Everything is standardized for consistent processing.
 
 3. **Information Analysis**
-   - Key points are extracted using advanced NLP
-   - Semantic analysis is performed using sentence transformers
-   - Content is vectorized for similarity matching
+   - Important details are extracted from the content using advanced Natural Language Processing (NLP).
+   - A deeper semantic analysis is performed to understand the meaning behind the words.
+   - The content is converted into vectors for easy comparison and matching.
 
 4. **Document Generation**
-   - BRDs are generated based on extracted information
-   - Quality checks are performed on generated content
-   - Documents are converted to standardized formats (PDF)
+   - Business Requirement Documents (BRDs) are created from the extracted information.
+   - A quality check is done on the generated documents to ensure they meet the required standards.
+   - The documents are then converted into a standardized format like PDF.
 
 5. **Task Management**
-   - Tasks are created based on document content
-   - Automatic assignment and prioritization
-   - Progress tracking and status updates
+   - Tasks are generated from the BRDs and automatically assigned and prioritized.
+   - The system keeps track of the task’s progress and updates the status in real-time.
 
 ### Technical Implementation
 
 #### Backend Architecture
 ```python
-# Core components interaction
+# How the agents interact in the system
 ReasoningPlanningAgent
-├── AudioToTextAgent      # Handles media transcription
-├── KeyPointExtractionAgent   # Extracts key information
-├── KnowledgeBaseAgent    # Manages data persistence
-├── BRDAuthorAgent       # Generates documents
-├── TaskManagementAgent  # Handles task workflow
-├── QualityCheckAgent    # Ensures output quality
-├── CommunicationAgent   # Manages notifications
-└── FeedbackAgent       # Processes user feedback
+├── AudioToTextAgent      # Converts audio/video to text
+├── KeyPointExtractionAgent   # Pulls out key information from content
+├── KnowledgeBaseAgent    # Stores and retrieves all data
+├── BRDAuthorAgent        # Generates Business Requirement Documents
+├── TaskManagementAgent   # Manages task creation and tracking
+├── QualityCheckAgent     # Ensures content quality
+├── CommunicationAgent    # Handles notifications
+└── FeedbackAgent         # Gathers and processes user feedback
+
 ```
 
 #### Key Features Implementation
