@@ -156,14 +156,15 @@ async def upload_file(background_tasks: BackgroundTasks, file: UploadFile = File
 def get_file(file_id: str):
     try:
         file_data = reasoning_agent.kb_agent.get_file(file_id)
-        if file_data and file_data["status"] == "done":
-            transcription = reasoning_agent.kb_agent.transcriptions_col.find_one({"file_id": file_id})
-            if transcription:
-                # Convert MongoDB objects to serializable format
-                file_data = json.loads(json.dumps(file_data, cls=MongoJSONEncoder))
-                transcription = json.loads(json.dumps(transcription, cls=MongoJSONEncoder))
-                file_data["transcription"] = transcription
-            logger.info(f"Retrieved file {file_id}")
+        if file_data:
+            # Convert MongoDB objects to serializable format
+            file_data = json.loads(json.dumps(file_data, cls=MongoJSONEncoder))
+            if file_data["status"] == "done":
+                transcription = reasoning_agent.kb_agent.transcriptions_col.find_one({"file_id": file_id})
+                if transcription:
+                    transcription = json.loads(json.dumps(transcription, cls=MongoJSONEncoder))
+                    file_data["transcription"] = transcription
+            logger.info(f"Retrieved file {file_id} with status {file_data['status']}")
             return JSONResponse(content=file_data)
         logger.error(f"File {file_id} not found")
         return JSONResponse(content={"error": "File not found"})
